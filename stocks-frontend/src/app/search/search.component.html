@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Search</title>
+</head>
+    <body>
+        <div>
+            <h1>Search</h1>
+            <div>
+                <input type="text" #box placeholder="Enter Stock Name" name="stockName">
+                <button (click)="getSearchInput(box.value)">Search</button>
+            </div>
+            <div>
+                <p>Current Data: </p>
+                <table *ngIf="arrData">
+                    <tr *ngFor="let rowIndex of getRowIndices()">
+                        <ng-container *ngFor="let key of getKeysForRow(rowIndex)">
+                            <ng-container *ngIf="arrData[key]">
+                                <th>{{ key }}</th>
+                                <td>{{ arrData[key] }}</td>
+                            </ng-container>
+                        </ng-container>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <p>Past Data: </p>
+                <table *ngIf="arrDataPast">
+                    <tr *ngFor="let rowIndex of getRowIndices()">
+                        <ng-container *ngFor="let key of getKeysForRow(rowIndex)">
+                            <ng-container *ngIf="arrDataPast[key]">
+                                <th>{{ key }}</th>
+                                <td>{{ arrDataPast[key] }}</td>
+                            </ng-container>
+                        </ng-container>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

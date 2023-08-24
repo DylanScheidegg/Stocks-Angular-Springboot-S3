@@ -1,0 +1,48 @@
+table, th, td 
+{
+    margin: 10px 0;
+    border: solid 1px #333;
+    padding: 2px 4px;
+    font-size: 0.9em;
+    background-color: aliceblue;
+}
+th {
+    font-weight:bold;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for the header element */
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Styling for the main content */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #f2f2f2;
+}
+
+/* Styling for buttons */
+button {
+    padding: 0.25rem 0.5rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
